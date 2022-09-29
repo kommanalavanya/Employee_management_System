@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="my-login.css">
+<style>
+  table{
+width: 100%;
+border-collapse:collapse;
+border: 1px solid black;
+}
+table td{line-height:25px;padding-left:15px;}
+table th{background-color:#fbc403; color:#363636;}
+</style>
+</head>
+
+<body class="my-login-page">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(138, 99, 193) !important;">
+      
+        <!-- container for responsiveness -->
+        <div class="container-fluid">
+  
+          <!-- first item: brand name -->
+         
+          <a class="navbar-brand" href="#" style="color: skyblue;">
+            <i class="fa fa-inr" style="font-size:22px"></i>
+            Salary Management</a>
+          <!-- this is the button when it collapses due to small screen size (data-bs-target must match the ID of the div below)-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- this div holds everything who is going to collapse inside the button (be careful with the ID. It must match with the button target) -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+            <!-- this list contains the "menu options (items)" such as download, contact, pricing, etc. -->
+            <ul id="my-ul" class="ms-auto navbar-nav">
+              
+              <!-- this is an item -->
+              <li class="nav-item">
+                <a class="nav-link" href="profile" style="color: skyblue;">View Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="viewsalary" style="color: skyblue;">View Salary</a>
+              </li>
+              <!-- this is another item -->
+              <li class="nav-item">
+                <a class="nav-link" href="userlogin" style="color: skyblue;">Logout</a>
+              </li>  
+            
+                     
+            
+            </ul>
+          
+          </div>
+        
+        </div>
+  
+      </nav>
+      <table border="1">
+        <tr height="70px" style="background-color:#363636;color:#ffffff;text-align:center;font-size:24px; font-weight:600;">
+          <td colspan='4'>Your Salary details</td>
+        <tr>
+        <th>YourId</th>
+        <td><%= data[0].eid%></td>
+        <th>Name</th>
+        <td><%= data[0].fname%></td>
+        </tr>
+        <!-----2 row--->
+        <tr>
+        <th>Bank</th>
+        <td>x0x0x0</td>
+        <th>Bank A/c No.</th>
+        <td>0x2x6x25x6</td>
+        </tr>
+        <!------3 row---->
+        <tr>
+        <th>DOB</th>
+        <td><%= data[0].dob%></td>
+        <th>Lop Days</th>
+        <td>0</td>
+        </tr>
+        <!------4 row---->
+       
+        <!------5 row---->
+        <tr>
+        <th>Location</th>
+        <td><%= data[0].location%></td>
+        <th>Working Days</th>
+        <td>30</td>
+        </tr>
+        <!------6 row---->
+        <tr>
+        <th>Department</th>
+        <td>IT</td>
+        <th>Designation</th>
+        <td>Designer</td>
+        </tr>
+        </table>
+        <tr></tr>
+        <br/>
+        <table border="1">
+        <tr>
+        <th >Earnings</th>
+        <th>Amount</th>
+        <th >Deductions</th>
+        <th>Amount</th>
+        </tr>
+        <tr>
+        <td>Basic</td>
+        <td><%= data[0].basic%></td>
+        <td>provident fund</td>
+        <td><%= data[0].pf%></td>
+        </tr>
+        <tr>
+        <td>House Rent Allowance</td>
+        <td><%= data[0].hra%></td>
+        </tr>
+        <tr>
+        <td>special Allowance</td>
+        <td><%= data[0].sa%></td>
+        <td>Income tax</td>
+        <td><%= data[0].incometax%></td>
+        </tr>
+        <tr>
+        <td>conveyance</td>
+        <td><%= data[0].conveyance%></td>
+        </tr>
+       
+       
+       
+        <tr>
+        <td>medical Allowance</td>
+        <td><%= data[0].ma%></td>
+        </tr>
+        <tr>
+        <th>Gross Earnings</th>
+        <td><%=ge1%></td>
+        <th >Gross Deductions</th>
+        <td><%=gd1%></td>
+        </tr>
+        <tr>
+      
+        <td><strong>NET PAY</strong></td>
+
+        <td><%= data[0].netpay%></td>
+   
+        </tr>
+        </table>
+        </body>
+        </html>
+      </body>
+      </html>
